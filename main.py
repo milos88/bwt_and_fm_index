@@ -18,8 +18,8 @@ if __name__=="__main__":
             input_str = input_str[:20000]+"$"
 
     skip = args.tally_skip
-    k = args.sa_skip # fraction of rows kept in SA
-    target_strs = list(args.patterns)# ["ATGCATG", "TCTCTCTA", "TTCACTACTCTCA"]
+    k = args.sa_skip
+    target_strs = list(args.patterns)
     bwt, sa = bwtViaSa(input_str)
     partial_sa = {i: si for i, si in enumerate(sa) if si % k == 0}
     bwt_len = len(bwt)

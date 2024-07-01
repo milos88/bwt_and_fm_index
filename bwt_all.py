@@ -2,11 +2,6 @@ import time
 import numpy as np
 import unittest 
 
-"""
-with open("data/bwt_coffea.txt", "w") as f:
-    f.write(bwt)
-"""
-
 def create_right_and_left_column_data(right_column):
     characters_right_list = []
     characters_left_dict = {}
@@ -303,7 +298,7 @@ def get_size(obj, seen=None):
     return size
 
 def memory_usage_of_all_vars(vars):
-    variables = vars # {k: v for k, v in globals().items() if not k.startswith('__') and not callable(v) and k in vars}
+    variables = vars 
     total_size = 0
     for name, obj in variables.items():
         size = get_size(obj)
